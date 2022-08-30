@@ -1,5 +1,7 @@
 #!/bin/bash
 
+read -p "Enter your github oath token: " TOKEN
+
 # Build a Docker/Podman image that contains the data for development
 # in the predictor project
 set -eux
@@ -53,13 +55,13 @@ RUN dnf install -y \
     gcc-c++
 
 # Grab the lastest package source.
-RUN git clone https://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@github.com/barbacbd/predictor.git
+RUN git clone https://${TOKEN}@github.com/barbacbd/predictor.git
 
 # Grab my specific source code for the FEAST project
 # I forked this project (do NOT own it) and have made my modifications
 # so that there is an extensive python extension.
 # Pull that data here and build the source on this vm
-RUN git clone https://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@github.com/barbacbd/FEAST.git
+RUN git clone https://${TOKEN}@github.com/barbacbd/FEAST.git
 RUN cd FEAST && git checkout py_update_setup_for_future_pys
 RUN cd FEAST/python && bash -c "./build.sh"
 
