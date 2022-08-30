@@ -1,6 +1,19 @@
 #!/bin/bash
 
-read -p "Enter your github oath token: " TOKEN
+# Allow the user to read in a token from the command line
+# If the token does not exist in the command line, ask for
+# the required token. The token is a personal access token
+# from github
+while getopts t: flag
+do
+    case "${flag}" in
+        t) TOKEN=${OPTARG};;
+    esac
+done
+
+if [ -z "${TOKEN}" ]; then
+    read -p "Enter your github oath token: " TOKEN
+fi
 
 # Build a Docker/Podman image that contains the data for development
 # in the predictor project
