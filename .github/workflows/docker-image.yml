@@ -1,7 +1,7 @@
 # This workflow will attempt to create the docker image and ensure that it builds correctly
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   schedule:
   - cron: "0 12 * * *"
 
