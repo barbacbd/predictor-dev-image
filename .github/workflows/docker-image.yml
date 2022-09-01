@@ -16,7 +16,6 @@ jobs:
           fetch-depth: 5
       - name: install podman
         run: |
-          apt-get -y update
           apt-get -y install podman
       - name: build-image
         env:
