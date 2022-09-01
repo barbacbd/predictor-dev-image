@@ -10,9 +10,10 @@
 
 [![build](https://github.com/barbacbd/predictor-dev-image/actions/workflows/docker-image.yml/badge.svg)](https://github.com/barbacbd/predictor-dev-image/actions/workflows/docker-image.yml)
 
-The project contains the instructions for creating the [docker](https://www.docker.com/) or [podman](https://podman.io/) image and running the container instance of the image.
+The project contains the instructions for creating the [docker](https://www.docker.com/) or [podman](https://podman.io/) development image and running the container instance of the image. The development image allows users to create a development environment in a container for software development purposes. 
 
 **Note**: _Podman and Docker can be used interchangeably throughout this document, unless specified otherwise_.
+**Note**: _Please modify the script and alter all personal details when utilizing the script for personal development_.
 
 # Initialization
 
