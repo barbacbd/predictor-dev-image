@@ -8,6 +8,8 @@
   </a>
 </h1>
 
+[![build](https://github.com/barbacbd/predictor-dev-image/actions/workflows/docker-image.yml/badge.svg)](https://github.com/barbacbd/predictor-dev-image/actions/workflows/docker-image.yml)
+
 The project contains the instructions for creating the [docker](https://www.docker.com/) or [podman](https://podman.io/) image and running the container instance of the image.
 
 **Note**: _Podman and Docker can be used interchangeably throughout this document, unless specified otherwise_.
