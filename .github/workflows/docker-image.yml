@@ -16,7 +16,8 @@ jobs:
           fetch-depth: 5
       - name: install podman
         run: |
-          apt-get -y install podman
+          sudo apt-get -y update
+          sudo apt-get -y install podman
       - name: build-image
         env:
           token: ${{ secrets.CI_TOKEN }}
